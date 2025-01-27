@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funktiolaskin ja Funktio piirtäjä</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Funktiolaskin ja Funktio piirtäjä</h1>
+    <form id="functionForm">
+        <label for="function">Funktio (käytä 'x' muuttujana):</label>
+        <input type="text" id="function" placeholder="esim. x*x" required><br><br>
+        
+        <label for="startX">x:n alkuarvo:</label>
+        <input type="number" id="startX" value="0" required><br><br>
+
+        <label for="endX">x:n loppuarvo:</label>
+        <input type="number" id="endX" value="10" required><br><br>
+
+        <label for="xStep">x:n askel:</label>
+        <input type="number" id="xStep" value="1" required><br><br>
+
+        <label for="yScale">y:n skaalauskerroin:</label>
+        <input type="number" id="yScale" value="1" required><br><br>
+
+        <button type="button" onclick="calculateAndPlot()">Laske</button>
+    </form>
+
+    <div id="results"></div>
+    <canvas id="functionPlot" width="600" height="400"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
